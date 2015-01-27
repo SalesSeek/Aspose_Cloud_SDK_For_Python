@@ -42,8 +42,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return len(response['Pictures']['PictureList'])
@@ -68,8 +68,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return len(response['OleObjects']['OleObjectList'])
@@ -94,8 +94,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return len(response['Charts']['ChartList'])
@@ -120,8 +120,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return len(response['Comments']['CommentList'])
@@ -146,8 +146,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return len(response['Hyperlinks']['HyperlinkList'])
@@ -172,8 +172,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response['MergedCells']['Count']
@@ -198,8 +198,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response['Validations']['Count']
@@ -225,8 +225,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response['Style']
@@ -252,8 +252,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response['Cell']
@@ -279,8 +279,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response['AutoShapes']
@@ -306,8 +306,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response['Chart']
@@ -333,8 +333,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response['Hyperlink']
@@ -360,8 +360,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response['OleObject']
@@ -387,8 +387,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response['Picture']
@@ -414,8 +414,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response['Validation']
@@ -441,8 +441,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response['MergedCell']
@@ -468,8 +468,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response['Comment']
@@ -494,8 +494,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return len(response['AutoShapes']['AutoShapeList'])
@@ -524,8 +524,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response['Cells']['CellCount']
@@ -554,8 +554,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response['Cells']['MaxColumn']
@@ -584,8 +584,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response['Cells']['MaxRow']
@@ -614,8 +614,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response['Cells']['CellList']
@@ -644,8 +644,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response['Rows']['RowsList']
@@ -674,8 +674,8 @@ class Worksheet:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response['Columns']['ColumnsList']
@@ -716,8 +716,8 @@ class Workbook:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return True if response['Code'] == 200 else False
@@ -743,8 +743,8 @@ class Workbook:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return True if response['Code'] == 200 else False
@@ -772,8 +772,8 @@ class Workbook:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return True if response['Code'] == 200 else False
@@ -801,8 +801,8 @@ class Workbook:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return True if response['Code'] == 200 else False
@@ -830,8 +830,8 @@ class Workbook:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return True if response['Code'] == 200 else False
@@ -861,8 +861,8 @@ class Workbook:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return True if response['Code'] == 200 else False
@@ -893,8 +893,8 @@ class Workbook:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return True if response['Code'] == 200 else False
@@ -919,8 +919,8 @@ class Workbook:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response['Style']
@@ -945,8 +945,8 @@ class Workbook:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return len(response['Names'])
@@ -971,8 +971,8 @@ class Workbook:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return len(response['Worksheets']['WorksheetList'])
@@ -1003,8 +1003,8 @@ class Workbook:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response
@@ -1036,8 +1036,8 @@ class Workbook:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response
@@ -1066,8 +1066,8 @@ class Workbook:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response
@@ -1094,8 +1094,8 @@ class Workbook:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response
@@ -1120,8 +1120,8 @@ class Workbook:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response['DocumentProperties']['DocumentPropertyList']
@@ -1147,8 +1147,8 @@ class Workbook:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response['DocumentProperty']
@@ -1177,8 +1177,8 @@ class Workbook:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return response['DocumentProperty']
@@ -1204,8 +1204,8 @@ class Workbook:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         return True if response['Code'] == 200 else False
@@ -1248,8 +1248,8 @@ class ChartEditor:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         validate_output = Utils.validate_result(response)
@@ -1281,8 +1281,8 @@ class ChartEditor:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         validate_output = Utils.validate_result(response)
@@ -1313,8 +1313,8 @@ class ChartEditor:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         validate_output = Utils.validate_result(response)
@@ -1353,8 +1353,8 @@ class ChartEditor:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         validate_output = Utils.validate_result(response)
@@ -1385,8 +1385,8 @@ class ChartEditor:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         validate_output = Utils.validate_result(response)
@@ -1435,8 +1435,8 @@ class TextEditor:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         validate_output = Utils.validate_result(response)
@@ -1472,8 +1472,8 @@ class TextEditor:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         validate_output = Utils.validate_result(response)
@@ -1511,8 +1511,8 @@ class TextEditor:
             response.raise_for_status()
             response = response.json()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         validate_output = Utils.validate_result(response)
@@ -1564,8 +1564,8 @@ class Extractor:
             }, stream=True)
             response.raise_for_status()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
         validate_output = Utils.validate_result(response)
         if not validate_output:
@@ -1605,8 +1605,8 @@ class Extractor:
             }, stream=True)
             response.raise_for_status()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
         validate_output = Utils.validate_result(response)
         if not validate_output:
@@ -1646,8 +1646,8 @@ class Extractor:
             }, stream=True)
             response.raise_for_status()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
         validate_output = Utils.validate_result(response)
         if not validate_output:
@@ -1687,8 +1687,8 @@ class Extractor:
             }, stream=True)
             response.raise_for_status()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
         validate_output = Utils.validate_result(response)
         if not validate_output:
@@ -1745,8 +1745,8 @@ class Converter:
             }, stream=True)
             response.raise_for_status()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
         validate_output = Utils.validate_result(response)
         if not validate_output:
@@ -1793,8 +1793,8 @@ class Converter:
             }, stream=True)
             response.raise_for_status()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
         validate_output = Utils.validate_result(response)
         if not validate_output:
@@ -1841,8 +1841,8 @@ class Converter:
             }, stream=True)
             response.raise_for_status()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
         validate_output = Utils.validate_result(response)
         if not validate_output:
@@ -1889,8 +1889,8 @@ class Converter:
             }, stream=True)
             response.raise_for_status()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
         validate_output = Utils.validate_result(response)
         if not validate_output:
@@ -1938,8 +1938,8 @@ class Converter:
             }, stream=True)
             response.raise_for_status()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
         validate_output = Utils.validate_result(response)
         if not validate_output:
@@ -1981,8 +1981,8 @@ class Converter:
             }, stream=True)
             response.raise_for_status()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
         validate_output = Utils.validate_result(response)
         if not validate_output:
@@ -2022,8 +2022,8 @@ class Converter:
             response = Utils.upload_file_binary(input_file, signed_uri)
             response.raise_for_status()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         validate_output = Utils.validate_result(response)

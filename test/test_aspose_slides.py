@@ -36,7 +36,7 @@ class TestAsposeSlides(unittest.TestCase):
 
         ex = Extractor('test_convert_slide.pptx')
         response = ex.get_shape(1,1)
-        self.assertNotEquals(False, response)
+        self.assertNotEqual(False, response)
 
 
 if __name__ == '__main__':

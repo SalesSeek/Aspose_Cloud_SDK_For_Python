@@ -1,4 +1,5 @@
 __author__ = 'AssadMahmood'
+import base64
 import requests
 import hmac
 import hashlib
@@ -7,7 +8,7 @@ import string
 import os
 import json
 
-from urlparse import urlparse
+from urllib.parse import urlparse
 from asposecloud import AsposeApp
 from asposecloud import Product
 
@@ -31,7 +32,7 @@ class Utils:
         :return: returns a uri with query string e.g http://api.aspose.com/v1/testurl?param1=value1&param2=value2
         """
         qry_str = ''
-        for key, value in qry_data.iteritems():
+        for key, value in qry_data.items():
             qry_str += str(key) + '=' + str(value) + '&'
 
         if qry_str:
@@ -92,7 +93,8 @@ class Utils:
             url_part_to_sign = url.scheme + "://" + url.netloc + url.path + "?" + url.query + "&appSID=" + \
                 AsposeApp.app_sid
 
-        signature = hmac.new(AsposeApp.app_key, url_part_to_sign, hashlib.sha1).digest().encode('base64')[:-1]
+        signature = hmac.new(AsposeApp.app_key.encode('utf-8'), url_part_to_sign.encode('utf-8'), hashlib.sha1).digest()
+        signature = base64.b64encode(signature)[:-1].decode('utf-8')
         signature = re.sub('[=_-]', '', signature)
 
         if url.query == "":
@@ -187,8 +189,8 @@ class Utils:
             }, stream=True)
             response.raise_for_status()
         except requests.HTTPError as e:
-            print e
-            print response.content
+            print(e)
+            print(response.content)
             exit(1)
 
         Utils.save_file(response, AsposeApp.output_path + output_filename)
