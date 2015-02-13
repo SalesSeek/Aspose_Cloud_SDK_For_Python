@@ -443,6 +443,49 @@ class TextEditor:
         else:
             return validate_output
 
+    def replace_text_list(self, replace_list, remote_folder='',
+                          storage_type='Aspose', storage_name=None):
+        """
+        Replace text on a document
+
+        :param replace_list: list of tuples (old_text, new_text, is_reg)
+        :param remote_folder: storage path to operate
+        :param storage_type: type of storage e.g Aspose, S3
+        :param storage_name: name of storage e.g. MyAmazonS3
+        :return:
+        """
+        str_uri = self.base_uri + '/replaceTextList'
+        str_uri = Utils.append_storage(str_uri, remote_folder, storage_type, storage_name)
+
+        data = []
+        for i in replace_list:
+            data.append({
+                'OldValue': i[0],
+                'NewValue': i[1],
+                'Regex': i[2]
+            })
+
+        json_data = json.dumps({'TextReplaces': data})
+
+        signed_uri = Utils.sign(str_uri)
+        response = None
+        try:
+            response = requests.post(signed_uri, json_data, headers={
+                'content-type': 'application/json', 'accept': 'application/json', 'x-aspose-client' : 'PYTHONSDK/v1.0'
+            })
+            response.raise_for_status()
+            response = response.json()
+        except requests.HTTPError as e:
+            print(e)
+            print(response.content)
+            exit(1)
+
+        validate_output = Utils.validate_result(response)
+        if not validate_output:
+            return True
+        else:
+            return validate_output
+
 
 class Extractor:
     """
