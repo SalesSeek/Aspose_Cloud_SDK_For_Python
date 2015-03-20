@@ -125,7 +125,7 @@ class Folder:
         response = requests.delete(signed_uri, headers={
             'content-type': 'application/json', 'accept': 'application/json', 'x-aspose-client' : 'PYTHONSDK/v1.0'
         }).json()
-        return True if response['Code'] == 200 else False
+        return True if response.get('Code',0) == 200 else False
 
     def create_folder(self, folder_name, storage_type='Aspose', storage_name=None):
         """
@@ -146,7 +146,7 @@ class Folder:
         response = requests.put(signed_uri, '', headers={
             'content-type': 'application/json', 'accept': 'application/json', 'x-aspose-client' : 'PYTHONSDK/v1.0'
         }).json()
-        return True if response['Code'] == 200 else False
+        return True if response.get('Code',0) == 200 else False
 
     def delete_folder(self, folder_name, storage_type='Aspose', storage_name=None):
         """
@@ -167,7 +167,7 @@ class Folder:
         response = requests.delete(signed_uri, headers={
             'content-type': 'application/json', 'accept': 'application/json', 'x-aspose-client' : 'PYTHONSDK/v1.0'
         }).json()
-        return True if response['Code'] == 200 else False
+        return True if response.get('Code',0) == 200 else False
 
     def get_disc_usage(self, storage_type='Aspose', storage_name=None):
         """
