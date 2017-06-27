@@ -8,7 +8,7 @@ import string
 import os
 import json
 
-from urllib.parse import urlparse
+from urllib.parse import urlparse, quote
 from asposecloud import AsposeApp
 from asposecloud import Product
 
@@ -96,6 +96,7 @@ class Utils:
         signature = hmac.new(AsposeApp.app_key.encode('utf-8'), url_part_to_sign.encode('utf-8'), hashlib.sha1).digest()
         signature = base64.b64encode(signature)[:-1].decode('utf-8')
         signature = re.sub('[=_-]', '', signature)
+        signature = quote(signature, safe='')
 
         if url.query == "":
             return url.scheme + "://" + url.netloc + url.path + "?appsid=" + AsposeApp.app_sid + "&signature=" + \
