@@ -13,7 +13,7 @@ class AsposeApp:
 
 
 class Product:
-    product_uri = 'http://api.aspose.com/v1.1/'
+    product_uri = 'http://api.aspose.cloud/v1.1/'
 
     def __init__(self, uri):
         Product.product_uri = uri

@@ -88,9 +88,9 @@ class Utils:
         url = urlparse(url_to_sign)
 
         if url.query == "":
-            url_part_to_sign = url.scheme + "://" + url.netloc + url.path + "?appSID=" + AsposeApp.app_sid
+            url_part_to_sign = url.scheme + "://" + url.netloc + url.path + "?appsid=" + AsposeApp.app_sid
         else:
-            url_part_to_sign = url.scheme + "://" + url.netloc + url.path + "?" + url.query + "&appSID=" + \
+            url_part_to_sign = url.scheme + "://" + url.netloc + url.path + "?" + url.query + "&appsid=" + \
                 AsposeApp.app_sid
 
         signature = hmac.new(AsposeApp.app_key.encode('utf-8'), url_part_to_sign.encode('utf-8'), hashlib.sha1).digest()
@@ -98,10 +98,10 @@ class Utils:
         signature = re.sub('[=_-]', '', signature)
 
         if url.query == "":
-            return url.scheme + "://" + url.netloc + url.path + "?appSID=" + AsposeApp.app_sid + "&signature=" + \
+            return url.scheme + "://" + url.netloc + url.path + "?appsid=" + AsposeApp.app_sid + "&signature=" + \
                 signature
         else:
-            return url.scheme + "://" + url.netloc + url.path + "?" + url.query + "&appSID=" + AsposeApp.app_sid + \
+            return url.scheme + "://" + url.netloc + url.path + "?" + url.query + "&appsid=" + AsposeApp.app_sid + \
                 "&signature=" + signature
 
     @staticmethod
